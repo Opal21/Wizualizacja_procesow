@@ -21,11 +21,29 @@ def task1():
 
 
 def task2():
-    pass
+    print("Podaj k:")
+    k = int(input())
+    print("Podaj T:")
+    T = int(input())
+    t = np.linspace(0, 10, 50)
+    _, ax = plt.subplots(figsize=(10, 10))
+    ax.plot(t, k / T * np.exp(-t / T), label='Odpowiedz impulsowa')
+    ax.plot(t, k * (1 - np.exp(-t / T)), label='Odpowiedz skokowa')
+    ax.legend()
+    plt.show()
 
 
 def task3():
-    pass
+    print("Podaj k:")
+    k = int(input())
+    print("Podaj T:")
+    T = int(input())
+    t = np.linspace(0, 10, 50)
+    _, ax = plt.subplots(figsize=(10, 10))
+    ax.plot(t, k * (1 - np.exp(-t / T)), label='Odpowiedz impulsowa')
+    ax.plot(t, (t - T * (1 - np.exp(-t / T))) / k, label='Odpowiedz skokowa')
+    ax.legend()
+    plt.show()
 
 
 def task4():
